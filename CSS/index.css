@@ -92,3 +92,16 @@ footer {
 footer p {
     margin: 0;
 }
+
+#maps {
+    max-width: 20px;
+
+}
+
+#phone {
+    max-width: 50px;
+}
+
+#doordash {
+    max-width: 50px;
+}
