@@ -19,6 +19,7 @@ header h1 {
 
 nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     background-color: #A52A2A;
 }
@@ -46,17 +47,22 @@ nav a:hover {
 
 .filter-buttons {
     margin-bottom: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
 }
 
 .filter-buttons button {
     padding: 0.5em 1em;
-    margin: 0 0.5em;
     font-size: 1em;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     background-color: #A52A2A;
     color: #fff;
+    flex: 1 0 30%;
+    max-width: 150px;
 }
 
 .filter-buttons button:hover {
@@ -67,14 +73,16 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1em;
 }
 
 .menu-item {
     background: white;
-    margin: 1em;
+    margin: 0.5em;
     padding: 1em;
     border: 1px solid #ccc;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -96,4 +104,35 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .filter-buttons button {
+        font-size: 0.9em;
+        padding: 0.5em;
+    }
+
+    .menu-item {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    .filter-buttons button {
+        font-size: 0.8em;
+        padding: 0.4em;
+    }
+
+    .menu-item {
+        width: 100%;
+    }
 }
